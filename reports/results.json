@@ -1,0 +1,53 @@
+{
+  "dataset": "data/raw/mohler.csv",
+  "answers": 2273,
+  "questions": 81,
+  "results": [
+    {
+      "model": "mean (floor)",
+      "pearson": -0.124,
+      "rmse": 1.112,
+      "mae": 0.905,
+      "qwk": 0.0
+    },
+    {
+      "model": "TF-IDF cosine only",
+      "pearson": 0.453,
+      "rmse": 0.996,
+      "mae": 0.75,
+      "qwk": 0.247
+    },
+    {
+      "model": "All features + Ridge",
+      "pearson": 0.544,
+      "rmse": 0.93,
+      "mae": 0.692,
+      "qwk": 0.431
+    },
+    {
+      "model": "All features + Gradient Boosting",
+      "pearson": 0.554,
+      "rmse": 0.925,
+      "mae": 0.658,
+      "qwk": 0.478
+    },
+    {
+      "model": "Grader A vs grader B (humans)",
+      "pearson": 0.597,
+      "rmse": 1.311,
+      "mae": 0.748,
+      "qwk": 0.491
+    }
+  ],
+  "feature_importance": {
+    "ref_coverage_minus_question": 0.10227007400517049,
+    "word_tfidf_cos": 0.04868784799255767,
+    "lsa_cos": 0.023768763006621663,
+    "char_tfidf_cos": 0.02374393285158579,
+    "ref_coverage": 0.01629839941238461,
+    "negation_mismatch": 0.010082852451902425,
+    "answer_precision": 0.005650872866440404,
+    "length_ratio": 0.0006419991011897052,
+    "log_answer_words": -0.00777637694831469
+  }
+}
